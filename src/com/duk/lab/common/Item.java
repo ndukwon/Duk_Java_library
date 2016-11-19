@@ -6,8 +6,12 @@ public class Item implements Comparable<Item> {
         mKey = key;
     }
 
+    public int getKey() {
+        return mKey;
+    }
+
     @Override
     public int compareTo(Item itemToCompare) {
-        
+        return mKey - itemToCompare.getKey();
     }
 }
