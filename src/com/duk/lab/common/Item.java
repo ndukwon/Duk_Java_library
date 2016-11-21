@@ -1,5 +1,15 @@
+/*
+ * Copyright @ DukwonNam
+ * email: ndukwon@google.com
+ */
+
 package com.duk.lab.common;
 
+/**
+ * 
+ * @author DukwonNam
+ *
+ */
 public class Item implements Comparable<Item> {
     private final int mKey;
     public Item(int key) {

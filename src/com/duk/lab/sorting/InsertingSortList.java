@@ -1,8 +1,18 @@
+/*
+ * Copyright @ DukwonNam
+ * email: ndukwon@google.com
+ */
+
 package com.duk.lab.sorting;
 
 import java.util.LinkedList;
 import java.util.List;
 
+/**
+ * 
+ * @author DukwonNam
+ *
+ */
 public class InsertingSortList {
 
     private List<Comparable> mList = new LinkedList<>();
