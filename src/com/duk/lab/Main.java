@@ -1,9 +1,18 @@
+/*
+ * Copyright @ DukwonNam
+ * email: ndukwon@google.com
+ */
+
 package com.duk.lab;
 
 import java.util.Arrays;
 
 import com.duk.lab.input.InputGenerator;
 import com.duk.lab.sorting.InsertionSort;
+
+/**
+ * @author DukwonNam
+ */
 
 public class Main {
 
