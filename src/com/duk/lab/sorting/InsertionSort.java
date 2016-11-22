@@ -18,6 +18,7 @@ public class InsertionSort {
                 if (array[i].compareTo(array[j]) < 0) {
                     // swap
                     insertPosition = j;
+                    break;
                 }
             }
 
