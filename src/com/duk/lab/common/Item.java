@@ -14,4 +14,9 @@ public class Item implements Comparable<Item> {
     public int compareTo(Item itemToCompare) {
         return mKey - itemToCompare.getKey();
     }
+
+    @Override
+    public String toString() {
+        return Integer.toString(mKey);
+    }
 }

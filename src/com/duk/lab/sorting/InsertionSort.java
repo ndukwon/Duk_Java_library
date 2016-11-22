@@ -1,33 +1,24 @@
 package com.duk.lab.sorting;
 
-import java.util.LinkedList;
-import java.util.List;
+public class InsertionSort {
 
-public class InsertingSortList {
-
-    private List<Comparable> mList = new LinkedList<>();
-    public boolean start(List<Comparable> inputList) {
-        System.out.println("InsertSort has started.");
-
-        for (Comparable item : inputList) {
-            insert(item);
-        }
-
-        return true;
-    }
-
-    public void insert(Comparable item) {
-        boolean isInserted = false;
-        for (int i = 0; i < mList.size(); i++) {
-            if (item.compareTo(mList.get(i)) < 0) {
-                mList.add(i, item);
-                isInserted = true;
-                break;
+    public void sort(Comparable[] array) {
+        for (int i = 0; i < array.length; i++) {
+            int insertPosition = -1;
+            for (int j = 0; j < i; j++) {
+                if (array[i].compareTo(array[j]) < 0) {
+                    // swap
+                    insertPosition = j;
+                }
             }
-        }
 
-        if (isInserted == false) {
-            mList.add(item);
+            if (insertPosition != -1) {
+                Comparable temp = array[i];
+                for (int j = i; j > insertPosition; j--) {
+                    array[j] = array[j -1];
+                }
+                array[insertPosition] = temp;
+            }
         }
     }
 }
