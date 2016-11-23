@@ -26,12 +26,17 @@ public class Main {
         System.out.println("InsertionSort");
         printArray(copiedArrayForInsertionSort);
         InsertionSort insertionSortUnit = new InsertionSort();
+
+        long startTime = System.currentTimeMillis();
         insertionSortUnit.sort(copiedArrayForInsertionSort);
+        long endTime = System.currentTimeMillis();
+
         printArray(copiedArrayForInsertionSort);
+        System.out.println("InsertionSort time: " + (endTime - startTime) + "ms");
     }
 
     private static void printArray(Comparable[] copiedArray) {
-        System.out.print(copiedArray.length + "[");
+        System.out.print(copiedArray.length + " [");
         for (Comparable item : copiedArray) {
             System.out.print(item + ", ");
         }
