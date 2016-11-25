@@ -21,42 +21,39 @@ public class Main {
         System.out.println("Hello world!!");
         final InputGenerator generator = new InputGenerator();
         final Comparable[] generatedArray = generator.getInputArray();
-        System.out.println("generatedArray");
-        printArray(generatedArray);
+        printArray("generatedArray", generatedArray);
 
         // Insertion sort
         {
             final Comparable[] copiedArrayForInsertionSort = Arrays.copyOf(generatedArray, generatedArray.length);
-            System.out.println("InsertionSort");
-            printArray(copiedArrayForInsertionSort);
+            printArray("InsertionSort", copiedArrayForInsertionSort);
             final InsertionSort insertionSortUnit = new InsertionSort();
 
             final long startTime = System.currentTimeMillis();
             insertionSortUnit.sort(copiedArrayForInsertionSort);
             final long endTime = System.currentTimeMillis();
 
-            printArray(copiedArrayForInsertionSort);
+            printArray("InsertionSort", copiedArrayForInsertionSort);
             System.out.println("InsertionSort time: " + (endTime - startTime) + "ms");
         }
 
         // Bubble sort
         {
             final Comparable[] copiedArrayForBubbleSort = Arrays.copyOf(generatedArray, generatedArray.length);
-            System.out.println("BubbleSort");
-            printArray(copiedArrayForBubbleSort);
+            printArray("BubbleSort", copiedArrayForBubbleSort);
             final BubbleSort bubbleSortUnit = new BubbleSort();
 
             final long startTime = System.currentTimeMillis();
             bubbleSortUnit.sort(copiedArrayForBubbleSort);
             final long endTime = System.currentTimeMillis();
 
-            printArray(copiedArrayForBubbleSort);
+            printArray("BubbleSort", copiedArrayForBubbleSort);
             System.out.println("BubbleSort time: " + (endTime - startTime) + "ms");
         }
     }
 
-    private static void printArray(Comparable[] arrayToPrint) {
-        System.out.print(arrayToPrint.length + " [");
+    private static void printArray(String text, Comparable[] arrayToPrint) {
+        System.out.print(text + "(" + arrayToPrint.length + ") [");
         for (Comparable item : arrayToPrint) {
             System.out.print(item + ", ");
         }
