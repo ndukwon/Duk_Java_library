@@ -7,7 +7,7 @@ public class InputGenerator {
 
     public Comparable[] getInputArray() {
         if (mArray == null) {
-            mArray = generateInputArray(5000, 5000);
+            mArray = generateInputArray(5000, 10000);
         }
         return mArray;
     }
