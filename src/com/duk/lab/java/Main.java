@@ -3,9 +3,9 @@
  * email: ndukwon@google.com
  */
 
-package com.duk.lab;
+package com.duk.lab.java;
 
-import com.duk.lab.calendar.CalendarTest;
+import com.duk.lab.java.calendar.CalendarTest;
 import com.duk.lab.sorting.SortingTest;
 
 /**

@@ -1,6 +1,6 @@
-package com.duk.lab.input;
+package com.duk.lab.java.input;
 
-import com.duk.lab.common.Item;
+import com.duk.lab.java.common.Item;
 
 public class InputGenerator {
     Item[] mArray;

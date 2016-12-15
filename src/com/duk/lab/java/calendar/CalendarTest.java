@@ -1,4 +1,4 @@
-package com.duk.lab.calendar;
+package com.duk.lab.java.calendar;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;

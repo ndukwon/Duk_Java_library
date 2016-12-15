@@ -3,7 +3,7 @@
  * email: ndukwon@google.com
  */
 
-package com.duk.lab.common;
+package com.duk.lab.java.common;
 
 /**
  * 

@@ -2,7 +2,7 @@ package com.duk.lab.sorting;
 
 import java.util.Arrays;
 
-import com.duk.lab.input.InputGenerator;
+import com.duk.lab.java.input.InputGenerator;
 
 public class SortingTest {
 
