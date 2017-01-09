@@ -6,7 +6,6 @@
 package com.duk.lab.java;
 
 import com.duk.lab.java.calendar.CalendarTest;
-import com.duk.lab.java.encoding.EncodingTest;
 import com.duk.lab.sorting.SortingTest;
 
 /**
@@ -17,8 +16,7 @@ public class Main {
 
     public static void main(String[] args) {
         System.out.println("Hello world!!");
-//        SortingTest.sortingTest();
+        SortingTest.sortingTest();
 //        CalendarTest.makeCalendarList();
-        EncodingTest.runDecodingTest();
     }
 }

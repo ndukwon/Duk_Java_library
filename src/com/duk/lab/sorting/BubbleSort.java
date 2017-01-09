@@ -10,8 +10,9 @@ package com.duk.lab.sorting;
  * @author DukwonNam
  *
  */
-public class BubbleSort {
+public class BubbleSort implements ISort {
 
+    @Override
     public void sort(Comparable[] array) {
         boolean isCompleted = true;
         while (isCompleted) {

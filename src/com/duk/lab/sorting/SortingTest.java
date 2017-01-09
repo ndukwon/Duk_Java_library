@@ -38,6 +38,20 @@ public class SortingTest {
             printArray("BubbleSort", copiedArrayForBubbleSort);
             System.out.println("BubbleSort time: " + (endTime - startTime) + "ms");
         }
+
+        // Selection sort
+        {
+            final Comparable[] copiedArrayForSelectionSort = Arrays.copyOf(generatedArray, generatedArray.length);
+            printArray("SelectionSort", copiedArrayForSelectionSort);
+            final SelectionSort selectionSortUnit = new SelectionSort();
+
+            final long startTime = System.currentTimeMillis();
+            selectionSortUnit.sort(copiedArrayForSelectionSort);
+            final long endTime = System.currentTimeMillis();
+
+            printArray("SelectionSort", copiedArrayForSelectionSort);
+            System.out.println("SelectionSort time: " + (endTime - startTime) + "ms");
+        }
     }
 
     private static void printArray(String text, Comparable[] arrayToPrint) {

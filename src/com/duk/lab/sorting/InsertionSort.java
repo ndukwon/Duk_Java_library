@@ -9,8 +9,9 @@ package com.duk.lab.sorting;
  * @author DukwonNam
  */
 
-public class InsertionSort {
+public class InsertionSort implements ISort {
 
+    @Override
     public void sort(Comparable[] array) {
         for (int i = 0; i < array.length; i++) {
             int insertPosition = -1;
