@@ -13,22 +13,17 @@ public class InsertionSort implements ISort {
 
     @Override
     public void sort(Comparable[] array) {
-        for (int i = 0; i < array.length; i++) {
-            int insertPosition = -1;
-            for (int j = 0; j < i; j++) {
-                if (array[i].compareTo(array[j]) < 0) {
-                    // swap
-                    insertPosition = j;
-                    break;
-                }
+        for (int i = 1; i < array.length; i++) {
+            final Comparable currentItem = array[i];
+            int insertPosition = i - 1;
+            while (insertPosition >= 0 && currentItem.compareTo(array[insertPosition]) < 0) {
+                array[insertPosition + 1] = array[insertPosition];
+                insertPosition--;
             }
 
-            if (insertPosition != -1) {
-                Comparable temp = array[i];
-                for (int j = i; j > insertPosition; j--) {
-                    array[j] = array[j -1];
-                }
-                array[insertPosition] = temp;
+            insertPosition++;
+            if (insertPosition < i) {
+                array[insertPosition] = currentItem;
             }
         }
     }
