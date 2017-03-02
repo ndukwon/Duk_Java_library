@@ -52,6 +52,20 @@ public class SortingTest {
             printArray("SelectionSort", copiedArrayForSelectionSort);
             System.out.println("SelectionSort time: " + (endTime - startTime) + "ms");
         }
+
+        // Merge sort
+        {
+            final Comparable[] copiedArrayForMergeSort = Arrays.copyOf(generatedArray, generatedArray.length);
+            printArray("MergeSort", copiedArrayForMergeSort);
+            final MergeSort mergeSortUnit = new MergeSort();
+
+            final long startTime = System.currentTimeMillis();
+            mergeSortUnit.sort(copiedArrayForMergeSort);
+            final long endTime = System.currentTimeMillis();
+
+            printArray("MergeSort", copiedArrayForMergeSort);
+            System.out.println("MergeSort time: " + (endTime - startTime) + "ms");
+        }
     }
 
     private static void printArray(String text, Comparable[] arrayToPrint) {
