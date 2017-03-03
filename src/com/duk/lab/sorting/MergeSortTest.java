@@ -1,3 +1,8 @@
+/*
+ * Copyright @ DukwonNam
+ * email: ndukwon@google.com
+ */
+
 package com.duk.lab.sorting;
 
 import static org.junit.Assert.*;
