@@ -76,7 +76,7 @@ public class SortingTest {
         {
             final Comparable[] copiedArrayForQuickSort = Arrays.copyOf(generatedArray, generatedArray.length);
             printArray("QuickSort", copiedArrayForQuickSort);
-            final MergeSort quickSortUnit = new MergeSort();
+            final QuickSort quickSortUnit = new QuickSort();
 
             final long startTime = System.currentTimeMillis();
             quickSortUnit.sort(copiedArrayForQuickSort);
@@ -88,10 +88,10 @@ public class SortingTest {
     }
 
     private static void printArray(String text, Comparable[] arrayToPrint) {
-        System.out.print(text + "(" + arrayToPrint.length + ") [");
-        for (Comparable item : arrayToPrint) {
-            System.out.print(item + ", ");
-        }
-        System.out.print("]\n");
+//        System.out.print(text + "(" + arrayToPrint.length + ") [");
+//        for (Comparable item : arrayToPrint) {
+//            System.out.print(item + ", ");
+//        }
+//        System.out.print("]\n");
     }
 }

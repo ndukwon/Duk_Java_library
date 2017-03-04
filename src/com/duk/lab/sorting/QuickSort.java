@@ -10,11 +10,12 @@ public class QuickSort implements ISort {
     @Override
     public void sort(Comparable[] array) {
         quickSort(array, 0, array.length - 1);
-        printArray("A", array, 0, array.length - 1);
+//        printArray("A", array, 0, array.length - 1);
     }
 
     private void quickSort(Comparable[] array, int startIndex, int endIndex) {
-        System.out.println("startIndex=" + startIndex + ", endIndex=" + endIndex);
+//        System.out.println("startIndex=" + startIndex + ", endIndex=" + endIndex);
+//        printArray("origin", array, startIndex, endIndex);
         if (startIndex >= endIndex) {
             return;
         }
@@ -23,23 +24,23 @@ public class QuickSort implements ISort {
         int left = startIndex + 1;
         int right = endIndex;
 
-        while (left < right) {
-            while (pivot.compareTo(array[left]) < 0) {
+        do {
+            while (array[left].compareTo(pivot) < 0 && left < endIndex) {
                 left++;
-                System.out.println("left=" + left);
             }
-            while (pivot.compareTo(array[right]) > 0) {
+            while (array[right].compareTo(pivot) > 0 && startIndex < right) {
                 right--;
-                System.out.println("right=" + right);
             }
 
+//            System.out.println("left=" + left + ", right=" + right);
             if (left < right) {
                 swap(array, left, right);
             }
 
-            printArray("A", array, startIndex, endIndex);
-        }
+//            printArray("status", array, startIndex, endIndex);
+        } while (left < right && left < endIndex && startIndex < right);
         swap(array, startIndex, right);
+//        printArray("status2", array, startIndex, endIndex);
 
         quickSort(array, startIndex, right - 1);
         quickSort(array, right + 1, endIndex);
