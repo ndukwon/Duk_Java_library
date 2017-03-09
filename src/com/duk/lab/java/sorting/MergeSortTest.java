@@ -3,7 +3,7 @@
  * email: ndukwon@google.com
  */
 
-package com.duk.lab.sorting;
+package com.duk.lab.java.sorting;
 
 import static org.junit.Assert.*;
 
@@ -13,21 +13,21 @@ import org.junit.Test;
 
 import com.duk.lab.java.input.InputGenerator;
 
-public class QuickSortTest {
+public class MergeSortTest {
 
     @Test
     public void testSort() {
         final InputGenerator generator = new InputGenerator();
         final Comparable[] generatedArray = generator.getInputArray();
 
-        final Comparable[] copiedArrayForQuickSort = Arrays.copyOf(generatedArray, generatedArray.length);
-        final QuickSort quickSortUnit = new QuickSort();
+        final Comparable[] copiedArrayForMergeSort = Arrays.copyOf(generatedArray, generatedArray.length);
+        final MergeSort mergeSortUnit = new MergeSort();
 
-        quickSortUnit.sort(copiedArrayForQuickSort);
+        mergeSortUnit.sort(copiedArrayForMergeSort);
 
-        for (int i = 0; i + 1 < copiedArrayForQuickSort.length; i++) {
-            final Comparable item = copiedArrayForQuickSort[i];
-            final Comparable nextItem = copiedArrayForQuickSort[i + 1];
+        for (int i = 0; i + 1 < copiedArrayForMergeSort.length; i++) {
+            final Comparable item = copiedArrayForMergeSort[i];
+            final Comparable nextItem = copiedArrayForMergeSort[i + 1];
             if (item.compareTo(nextItem) > 0) {
                 fail("sorting failed");
             }

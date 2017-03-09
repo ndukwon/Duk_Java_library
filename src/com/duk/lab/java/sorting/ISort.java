@@ -3,7 +3,7 @@
  * email: ndukwon@google.com
  */
 
-package com.duk.lab.sorting;
+package com.duk.lab.java.sorting;
 
 /**
  * @author DukwonNam

@@ -5,9 +5,9 @@ import com.duk.lab.java.common.Item;
 public class InputGenerator {
     Item[] mArray;
 
-    public Comparable[] getInputArray() {
+    public Item[] getInputArray() {
         if (mArray == null) {
-            mArray = generateInputArray(20000, 50000, false);
+            mArray = generateInputArray(5, 10, false);
         }
         return mArray;
     }

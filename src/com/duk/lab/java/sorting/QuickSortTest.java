@@ -3,7 +3,7 @@
  * email: ndukwon@google.com
  */
 
-package com.duk.lab.sorting;
+package com.duk.lab.java.sorting;
 
 import static org.junit.Assert.*;
 
@@ -13,21 +13,21 @@ import org.junit.Test;
 
 import com.duk.lab.java.input.InputGenerator;
 
-public class BubbleSortTest {
+public class QuickSortTest {
 
     @Test
     public void testSort() {
         final InputGenerator generator = new InputGenerator();
         final Comparable[] generatedArray = generator.getInputArray();
 
-        final Comparable[] copiedArrayForBubbleSort = Arrays.copyOf(generatedArray, generatedArray.length);
-        final BubbleSort bubbleSortUnit = new BubbleSort();
+        final Comparable[] copiedArrayForQuickSort = Arrays.copyOf(generatedArray, generatedArray.length);
+        final QuickSort quickSortUnit = new QuickSort();
 
-        bubbleSortUnit.sort(copiedArrayForBubbleSort);
+        quickSortUnit.sort(copiedArrayForQuickSort);
 
-        for (int i = 0; i + 1 < copiedArrayForBubbleSort.length; i++) {
-            final Comparable item = copiedArrayForBubbleSort[i];
-            final Comparable nextItem = copiedArrayForBubbleSort[i + 1];
+        for (int i = 0; i + 1 < copiedArrayForQuickSort.length; i++) {
+            final Comparable item = copiedArrayForQuickSort[i];
+            final Comparable nextItem = copiedArrayForQuickSort[i + 1];
             if (item.compareTo(nextItem) > 0) {
                 fail("sorting failed");
             }
