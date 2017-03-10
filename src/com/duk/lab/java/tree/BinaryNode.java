@@ -7,32 +7,32 @@ import com.duk.lab.java.common.Item;
  *
  */
 public class BinaryNode {
-    private Item item;
-    private BinaryNode leftChild;
-    private BinaryNode rightChild;
+    private Item mItem;
+    private BinaryNode mLeftChild;
+    private BinaryNode mRightChild;
 
     public BinaryNode(Item item) {
-        this.item = item;
+        mItem = item;
     }
 
     public Item getItem() {
-        return item;
+        return mItem;
     }
 
     public BinaryNode getLeftChild() {
-        return leftChild;
+        return mLeftChild;
     }
 
     public void setLeftChild(BinaryNode leftChild) {
-        this.leftChild = leftChild;
+        mLeftChild = leftChild;
     }
 
     public BinaryNode getRightChild() {
-        return rightChild;
+        return mRightChild;
     }
 
     public void setRightChild(BinaryNode rightChild) {
-        this.rightChild = rightChild;
+        mRightChild = rightChild;
     }
 
     public int compareTo(BinaryNode node) {
@@ -40,6 +40,11 @@ public class BinaryNode {
     }
 
     public int compareTo(Item item) {
-        return item.compareTo(item);
+        return mItem.compareTo(item);
+    }
+
+    @Override
+    public String toString() {
+        return mItem.toString();
     }
 }

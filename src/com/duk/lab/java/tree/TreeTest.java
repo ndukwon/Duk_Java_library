@@ -18,11 +18,15 @@ public class TreeTest {
             final Item[] copiedArrayForBinaryTree = Arrays.copyOf(generatedArray, generatedArray.length);
             final BinaryTree binaryTree = new BinaryTree();
 
-            final long startTime = System.currentTimeMillis();
+            long startTime = System.currentTimeMillis();
             binaryTree.putAll(copiedArrayForBinaryTree);
-            final long endTime = System.currentTimeMillis();
+            long endTime = System.currentTimeMillis();
+            System.out.println("BinaryTree insert time: " + (endTime - startTime) + "ms");
 
-            System.out.println("BinaryTree time: " + (endTime - startTime) + "ms");
+            startTime = System.currentTimeMillis();
+            binaryTree.printTree();
+            endTime = System.currentTimeMillis();
+            System.out.println("BinaryTree print time: " + (endTime - startTime) + "ms");
         }
     }
 }
