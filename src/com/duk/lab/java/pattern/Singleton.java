@@ -11,12 +11,15 @@ package com.duk.lab.java.pattern;
  * reference:
  * - http://jusungpark.tistory.com/16
  * - https://blog.seotory.com/post/2016/03/java-singleton-pattern
+ * - http://changsuk.me/?p=1433
+ * - https://en.wikipedia.org/wiki/Initialization-on-demand_holder_idiom
  */
 
 public class Singleton {
 
     private Singleton() {
-        // Do nothing
+        // to check time
+        for (int i = 0; i < 1000; i++);
     }
 
     private static Singleton sInstance;
@@ -42,8 +45,16 @@ public class Singleton {
         sInstanceSync = null;
     }
     
-    private static Singleton sInstanceStatic = new Singleton();
+    private static final Singleton STATIC_INSTANCE = new Singleton();
     public static synchronized Singleton getInstanceStatic() {
-        return sInstanceSync;
+        return STATIC_INSTANCE;
+    }
+    
+    private static class LazyHolder {
+        public static final Singleton INSTANCE = new Singleton();
+    }
+    
+    public static synchronized Singleton getInstanceLazyHolder() {
+        return LazyHolder.INSTANCE;
     }
 }
