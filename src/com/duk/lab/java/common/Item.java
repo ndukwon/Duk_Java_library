@@ -1,6 +1,6 @@
 /*
  * Copyright @ DukwonNam
- * email: ndukwon@google.com
+ * email: ndukwon@gmail.com
  */
 
 package com.duk.lab.java.common;

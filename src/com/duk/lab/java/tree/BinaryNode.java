@@ -1,3 +1,8 @@
+/*
+ * Copyright @ DukwonNam
+ * email: ndukwon@gmail.com
+ */
+
 package com.duk.lab.java.tree;
 
 import com.duk.lab.java.common.Item;
