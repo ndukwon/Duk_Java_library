@@ -46,7 +46,7 @@ public class Singleton {
     }
     
     private static final Singleton STATIC_INSTANCE = new Singleton();
-    public static synchronized Singleton getInstanceStatic() {
+    public static Singleton getInstanceStatic() {
         return STATIC_INSTANCE;
     }
     
@@ -54,7 +54,7 @@ public class Singleton {
         public static final Singleton INSTANCE = new Singleton();
     }
     
-    public static synchronized Singleton getInstanceLazyHolder() {
+    public static Singleton getInstanceLazyHolder() {
         return LazyHolder.INSTANCE;
     }
 }

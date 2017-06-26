@@ -7,12 +7,15 @@ package com.duk.lab.java.sorting;
 
 import java.util.Arrays;
 
+import org.junit.Test;
+
 import com.duk.lab.java.input.InputGenerator;
 import com.duk.lab.java.util.PrintUtil;
 
 public class SortingTest {
 
-    public static void sortingTest() {
+    @Test
+    public void sortingTest() {
         final InputGenerator generator = new InputGenerator();
         final Comparable[] generatedArray = generator.getInputArray();
         PrintUtil.printArray("generatedArray", generatedArray);
