@@ -57,6 +57,4 @@ public class Singleton {
     public static synchronized Singleton getInstanceLazyHolder() {
         return LazyHolder.INSTANCE;
     }
-    
-    // TODO: Enum singleton
 }
