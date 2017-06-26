@@ -34,6 +34,7 @@ public class FundamentalTest {
     @Test
     public void testArrayList() {
         System.out.println("testArrayList list");
+        System.out.println();
         testList(arrayList);
     }
     
