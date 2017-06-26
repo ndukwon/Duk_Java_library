@@ -13,7 +13,7 @@ public class CustomAnnotationImpl {
     private String name;
     
     @NotNull
-    @CustomAnnotation("bbb")
+    @CustomAnnotation(value="ccc", name="bbb")
     private String value;
 
     CustomAnnotationImpl(String name, String value) {

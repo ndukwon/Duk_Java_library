@@ -32,7 +32,7 @@ import java.lang.annotation.Target;
 
 /**
  * 
- * @author dukwonnam
+ * @author ndukwon@gmail.com
  * 
  * Reference:
  * - http://jdm.kr/blog/216
