@@ -12,7 +12,7 @@ public class InputGenerator {
 
     public Item[] getInputArray() {
         if (mArray == null) {
-            mArray = generateInputArray(5, 10, false);
+            mArray = generateInputArray(500, 500, false);
         }
         return mArray;
     }

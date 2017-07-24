@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Queue;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -93,4 +94,23 @@ public class FundamentalTest {
         System.out.println("list 'forEach()' test time=" + (endTime - startTime) + "ms");
     }
 
+    @Test
+    public void testQueue() {
+        Queue<String> queue = new LinkedList<>();
+        queue.offer("a");
+        queue.offer("b");
+        queue.offer("c");
+        queue.offer("d");
+        System.out.println(queue);
+        queue.poll();
+        System.out.println(queue);
+        queue.poll();
+        System.out.println(queue);
+        queue.poll();
+        System.out.println(queue);
+        queue.poll();
+        System.out.println(queue);
+        queue.poll();
+        System.out.println(queue);
+    }
 }
